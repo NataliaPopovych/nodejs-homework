@@ -1,12 +1,12 @@
 import express from "express";
 
-import contactsController from "../../controllers/contacts-controllers.js";
-import { isEmptyBody } from "../../middleware/index.js";
+import contactsController from "../../controllers/contacts-controller.js";
+import { isEmptyBody } from "../../middlewares/index.js";
 import { validateBody } from "../../decorators/index.js";
 import {
   contactAddSchema,
   contactUpdateSchema,
-} from "../../schemas/contacts-schemas.js";
+} from "../../schemas/contacts-schema.js";
 
 const router = express.Router();
 
