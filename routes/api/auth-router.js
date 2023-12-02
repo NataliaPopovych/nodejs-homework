@@ -1,12 +1,12 @@
 import express from "express";
-import authController from "../../controllers/auth-controllers.js";
+import authController from "../../controllers/auth-controller.js";
 import { authenticate, isEmptyBody } from "../../middlewares/index.js";
 import { validateBody } from "../../decorators/index.js";
 import {
   userSignupSchema,
   userSigninSchema,
   updateUserSubscriptionSchema,
-} from "../../schemas/users-schemas.js";
+} from "../../schemas/users-schema.js";
 
 const authRouter = express.Router();
 
