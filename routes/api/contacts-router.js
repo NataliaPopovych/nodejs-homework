@@ -2,6 +2,7 @@ import express from "express";
 
 import contactsController from "../../controllers/contacts-controller.js";
 import {
+  authenticate,
   isEmptyBody,
   isEmptyBodyFavorite,
   isValidId,
@@ -14,6 +15,8 @@ import {
 } from "../../schemas/contacts-schema.js";
 
 const router = express.Router();
+
+router.use(authenticate);
 
 router.get("/", contactsController.getAllContacts);
 
